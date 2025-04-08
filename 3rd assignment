@@ -1,0 +1,70 @@
+Here's a Java program that demonstrates your requirements:
+
+1. An abstract class Bird with abstract methods fly() and makeSound().
+
+
+2. Two subclasses: Eagle and Hawk, which extend Bird and implement the methods.
+
+
+
+// Abstract class Bird
+abstract class Bird {
+    // Abstract methods
+    abstract void fly();
+    abstract void makeSound();
+}
+
+// Subclass Eagle
+class Eagle extends Bird {
+    @Override
+    void fly() {
+        System.out.println("Eagle soars high in the sky with wide wings.");
+    }
+
+    @Override
+    void makeSound() {
+        System.out.println("Eagle screeches sharply.");
+    }
+}
+
+// Subclass Hawk
+class Hawk extends Bird {
+    @Override
+    void fly() {
+        System.out.println("Hawk glides swiftly through the air.");
+    }
+
+    @Override
+    void makeSound() {
+        System.out.println("Hawk makes a loud, piercing call.");
+    }
+}
+
+// Main class to test the functionality
+public class BirdTest {
+    public static void main(String[] args) {
+        Bird eagle = new Eagle();
+        Bird hawk = new Hawk();
+
+        System.out.println("Eagle:");
+        eagle.fly();
+        eagle.makeSound();
+
+        System.out.println("\nHawk:");
+        hawk.fly();
+        hawk.makeSound();
+    }
+}
+
+Output:
+
+Eagle:
+Eagle soars high in the sky with wide wings.
+Eagle screeches sharply.
+
+Hawk:
+Hawk glides swiftly through the air.
+Hawk makes a loud, piercing call.
+
+Let me know if you want to add more bird types or enhance it further with features like interfaces or attributes.
+
